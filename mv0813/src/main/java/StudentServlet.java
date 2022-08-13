@@ -33,8 +33,13 @@ public class StudentServlet extends HttpServlet {
 	      //builder.setPrettyPrinting(); 
 
 	      Gson gson = builder.create(); 
-	      student student = gson.fromJson(jsonString, student.class); 
-	      response.getWriter().append(student.toString());
+	      student[] student = gson.fromJson(jsonString, student[].class); 
+	      String msg="";
+	      for(student s:student) {
+	    	  msg+=s.toString()+"<br/>";
+	      }
+	      response.setContentType("text/html;charset=utf-8");
+	      response.getWriter().append(msg);
 	      System.out.println(student);    
 	      jsonString = gson.toJson(student); 
 	      System.out.println(jsonString);  
