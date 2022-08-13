@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
-@ApplicationPath("servicess")
+@ApplicationPath("services")
 public class FirstApp extends Application {
 
 
