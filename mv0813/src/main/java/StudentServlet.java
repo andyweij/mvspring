@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import model.student;
+import model.studentDAO;
+
 import com.google.gson.*;
 /**
  * Servlet implementation class StudentServlet
@@ -38,8 +40,10 @@ public class StudentServlet extends HttpServlet {
 	      for(student s:student) {
 	    	  msg+=s.toString()+"<br/>";
 	      }
+	      studentDAO dao=new studentDAO();
+	      dao.addArray(student);
 	      response.setContentType("text/html;charset=utf-8");
-	      response.getWriter().append(msg);
+		  response.getWriter().append(msg);
 	      System.out.println(student);    
 	      jsonString = gson.toJson(student); 
 	      System.out.println(jsonString);  
