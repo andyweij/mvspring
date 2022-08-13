@@ -1,8 +1,8 @@
 package model;
 
 public class student {
-int age;
-String name;
+private int age;
+private String name;
 public student() {
 	
 }
