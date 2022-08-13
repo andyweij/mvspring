@@ -11,6 +11,6 @@ public class HelloWorldRestService {
     @GET
     @Produces(MediaType.TEXT_PLAIN + ";charset=UTF-8")
     public String getHelloMessage(){
-        return "Hi 您好!!";
+        return "Hi 您好!";
     }
 }
