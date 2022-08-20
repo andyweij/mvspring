@@ -6,6 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 import javax.persistence.*;
 import model.*;
 import java.util.*;
@@ -44,7 +45,6 @@ public class JPACoffeeServlet extends HttpServlet {
         request.setAttribute("coffees", list);
         request.getRequestDispatcher("coffee.jsp").forward(request, response);
 	}
-		
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
