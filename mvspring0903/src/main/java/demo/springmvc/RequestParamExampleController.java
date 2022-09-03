@@ -14,7 +14,7 @@ public class RequestParamExampleController {
  
         model.addAttribute("name", name);
  
-        if("admin".equals(name)||"name".length()!=0) {
+        if("admin".equals(name)||!"name".isEmpty()) {
             model.addAttribute("email", "@demo.com");
         } else{
             model.addAttribute("email", "Not set");
