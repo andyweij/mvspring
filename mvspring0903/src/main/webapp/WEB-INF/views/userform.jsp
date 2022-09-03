@@ -4,12 +4,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>User Form</title>
 </head>
 <body>
-   <h2>${name}</h2> 
-   Email:${name} ${email}
-   <br>
-
+<form action="user" method="post">
+    User Name:<input  type="text"  name="name" value="${username}"/><br/>
+    <input type="submit"/>
 </body>
 </html>
