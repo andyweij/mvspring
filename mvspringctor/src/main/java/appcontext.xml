@@ -16,5 +16,21 @@
 			</list>
 		</constructor-arg>
 	</bean>  
+	<bean id="ds"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName"
+			value="com.mysql.cj.jdbc.Driver"></property>
+		<property name="url"
+			value="jdbc:mysql://localhost:3306/classicmodels?useUnicode=true&amp;characterEncoding=utf-8"></property>
+		<property name="username" value="root"></property>
+		<property name="password" value="1234"></property>
+	</bean>
+	<bean id="jt" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="ds"></property>
+	</bean>
+	<bean id="dao" class="demo.spring.beans.EmployeeDAO">
+		<property name="template" ref="jt"></property>
+	</bean>
+	
 </beans>
 
